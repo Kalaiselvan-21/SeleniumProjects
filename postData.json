@@ -1,0 +1,12 @@
+{
+  "Student":
+  [
+    {
+      "firstname": "Kalai",
+      "lastname": "R",
+      "age": 30,
+      "email": "Kalai@gmail.com",
+      "isVerified": true
+    }
+  ]
+}
