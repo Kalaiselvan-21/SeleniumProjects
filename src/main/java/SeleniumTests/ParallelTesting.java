@@ -13,6 +13,7 @@ public class ParallelTesting {
         driver = new ChromeDriver();
         driver.get("https://www.google.co.in");
         Thread.sleep(2000);
+        driver.quit();
     }
     @Test
     public void openYahoo() throws InterruptedException {
@@ -20,5 +21,7 @@ public class ParallelTesting {
         driver = new ChromeDriver();
         driver.get("https://www.yahoo.co.in");
         Thread.sleep(2000);
+        driver.quit();
     }
+    
 }

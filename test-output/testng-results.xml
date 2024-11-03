@@ -1,62 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-10-29T19:00:27 IST" name="Default suite" finished-at="2024-10-29T19:00:27 IST" duration-ms="107">
+  <suite started-at="2024-11-03T12:17:25 IST" name="All Test Suite" finished-at="2024-11-03T12:17:30 IST" duration-ms="5056">
     <groups>
+      <group name="Apple">
+        <method signature="GroupingExample.Apple1()[pri:0, instance:SeleniumTests.GroupingExample@46268f08]" name="Apple1" class="SeleniumTests.GroupingExample"/>
+        <method signature="GroupingExample.Apple2()[pri:0, instance:SeleniumTests.GroupingExample@46268f08]" name="Apple2" class="SeleniumTests.GroupingExample"/>
+      </group> <!-- Apple -->
+      <group name="OnePlus">
+        <method signature="GroupingExample.OnePlus1()[pri:0, instance:SeleniumTests.GroupingExample@46268f08]" name="OnePlus1" class="SeleniumTests.GroupingExample"/>
+        <method signature="GroupingExample.OnePlus2()[pri:0, instance:SeleniumTests.GroupingExample@46268f08]" name="OnePlus2" class="SeleniumTests.GroupingExample"/>
+      </group> <!-- OnePlus -->
     </groups>
-    <test started-at="2024-10-29T19:00:27 IST" name="Default test" finished-at="2024-10-29T19:00:27 IST" duration-ms="107">
-      <class name="RestAssuredLearning.getAllEmployees">
-        <test-method signature="createFromFile()[pri:0, instance:RestAssuredLearning.getAllEmployees@1199fe66]" started-at="2024-10-29T19:00:27 IST" name="createFromFile" finished-at="2024-10-29T19:00:27 IST" duration-ms="94" status="FAIL">
-          <exception class="java.lang.NoClassDefFoundError">
-            <message>
-              <![CDATA[io/restassured/path/json/mapper/factory/JsonbObjectMapperFactory]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NoClassDefFoundError: io/restassured/path/json/mapper/factory/JsonbObjectMapperFactory
-at io.restassured.config.RestAssuredConfig.<init>(RestAssuredConfig.java:41)
-at io.restassured.RestAssured.<clinit>(RestAssured.java:422)
-at RestAssuredLearning.getAllEmployees.createFromFile(getAllEmployees.java:64)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:569)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:829)
-at org.testng.TestRunner.run(TestRunner.java:602)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: java.lang.ClassNotFoundException: io.restassured.path.json.mapper.factory.JsonbObjectMapperFactory
-at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
-at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
-at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
-... 31 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NoClassDefFoundError -->
+    <test started-at="2024-11-03T12:17:25 IST" name="SeleniumProjects" finished-at="2024-11-03T12:17:30 IST" duration-ms="5056">
+      <class name="SeleniumTests.GroupingExample">
+        <test-method signature="Apple2()[pri:0, instance:SeleniumTests.GroupingExample@46268f08]" started-at="2024-11-03T12:17:25 IST" name="Apple2" finished-at="2024-11-03T12:17:25 IST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createFromFile -->
-      </class> <!-- RestAssuredLearning.getAllEmployees -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- Apple2 -->
+        <test-method signature="Apple1()[pri:0, instance:SeleniumTests.GroupingExample@46268f08]" started-at="2024-11-03T12:17:25 IST" name="Apple1" finished-at="2024-11-03T12:17:25 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Apple1 -->
+        <test-method signature="OnePlus1()[pri:0, instance:SeleniumTests.GroupingExample@46268f08]" started-at="2024-11-03T12:17:25 IST" name="OnePlus1" finished-at="2024-11-03T12:17:25 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OnePlus1 -->
+        <test-method signature="OnePlus2()[pri:0, instance:SeleniumTests.GroupingExample@46268f08]" started-at="2024-11-03T12:17:25 IST" name="OnePlus2" finished-at="2024-11-03T12:17:25 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OnePlus2 -->
+        <test-method signature="Samsung2()[pri:0, instance:SeleniumTests.GroupingExample@46268f08]" started-at="2024-11-03T12:17:25 IST" name="Samsung2" finished-at="2024-11-03T12:17:25 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Samsung2 -->
+        <test-method signature="Samsung1()[pri:0, instance:SeleniumTests.GroupingExample@46268f08]" started-at="2024-11-03T12:17:25 IST" name="Samsung1" finished-at="2024-11-03T12:17:25 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Samsung1 -->
+      </class> <!-- SeleniumTests.GroupingExample -->
+      <class name="SeleniumTests.ParallelTesting">
+        <test-method signature="openGoogle()[pri:0, instance:SeleniumTests.ParallelTesting@66565121]" started-at="2024-11-03T12:17:25 IST" name="openGoogle" finished-at="2024-11-03T12:17:29 IST" duration-ms="3628" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openGoogle -->
+        <test-method signature="openYahoo()[pri:0, instance:SeleniumTests.ParallelTesting@66565121]" started-at="2024-11-03T12:17:25 IST" name="openYahoo" finished-at="2024-11-03T12:17:30 IST" duration-ms="5031" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openYahoo -->
+      </class> <!-- SeleniumTests.ParallelTesting -->
+    </test> <!-- SeleniumProjects -->
+  </suite> <!-- All Test Suite -->
 </testng-results>

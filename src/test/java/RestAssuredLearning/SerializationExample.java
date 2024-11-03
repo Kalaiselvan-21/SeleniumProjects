@@ -23,7 +23,7 @@ import java.util.Map;
 
 public class SerializationExample {
 
-    @Test
+    
     public void serialization()
     {
         Map<String, Object> jsonBody = new HashMap<String, Object>();

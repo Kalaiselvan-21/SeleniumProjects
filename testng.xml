@@ -25,9 +25,9 @@
                 <include name="openYahoo"/>
             </methods>
             </class>-->
-            <!--<class name="SeleniumTests.GroupingExample"> </class>-->
-            <!--<class name="SeleniumTests.ParameterizationExample"> </class>-->
-           <!-- <class name="SeleniumTests.ParallelTesting"> </class>-->
+            <class name="SeleniumTests.GroupingExample"> </class>
+            <!-- <class name="SeleniumTests.ParameterizationExample"> </class>-->
+           <class name="SeleniumTests.ParallelTesting"> </class>
            <!-- <class name="SeleniumTests.AnnotationsHierarchy"> </class>-->
            <!-- <class name="SeleniumTests.SampleTestCase"> </class>-->
 

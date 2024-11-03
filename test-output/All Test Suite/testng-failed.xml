@@ -3,11 +3,11 @@
 <suite thread-count="2" parallel="methods" name="Failed suite [All Test Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="2" parallel="methods" name="SeleniumProjects(failed)">
     <classes>
-      <class name="RestAssuredLearning.SerializationExample">
+      <class name="SeleniumTests.ParameterizationExample">
         <methods>
-          <include name="serialization"/>
+          <include name="printName"/>
         </methods>
-      </class> <!-- RestAssuredLearning.serializationExample -->
+      </class> <!-- SeleniumTests.ParameterizationExample -->
     </classes>
   </test> <!-- SeleniumProjects(failed) -->
 </suite> <!-- Failed suite [All Test Suite] -->
