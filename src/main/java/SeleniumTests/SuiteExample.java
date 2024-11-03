@@ -18,15 +18,15 @@ public class SuiteExample {
     @Test
     public void openGoogle() throws InterruptedException {
         driver.get("http://www.google.co.in");
-       // Thread.sleep(2000);
+       Thread.sleep(2000);
     }
 
     @Test
     public void openYahoo() throws InterruptedException {
         driver.get("http://www.yahoo.co.in");
-        /*Thread.sleep(2000);*/
+        Thread.sleep(2000);
         driver.navigate().back();
-        //Thread.sleep(2000);
+        Thread.sleep(2000);
     }
 
     @AfterClass
