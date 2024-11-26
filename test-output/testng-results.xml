@@ -1,55 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-11-03T12:17:25 IST" name="All Test Suite" finished-at="2024-11-03T12:17:30 IST" duration-ms="5056">
+  <suite started-at="2024-11-18T17:11:15 IST" name="Default suite" finished-at="2024-11-18T17:11:45 IST" duration-ms="29400">
     <groups>
-      <group name="Apple">
-        <method signature="GroupingExample.Apple1()[pri:0, instance:SeleniumTests.GroupingExample@46268f08]" name="Apple1" class="SeleniumTests.GroupingExample"/>
-        <method signature="GroupingExample.Apple2()[pri:0, instance:SeleniumTests.GroupingExample@46268f08]" name="Apple2" class="SeleniumTests.GroupingExample"/>
-      </group> <!-- Apple -->
-      <group name="OnePlus">
-        <method signature="GroupingExample.OnePlus1()[pri:0, instance:SeleniumTests.GroupingExample@46268f08]" name="OnePlus1" class="SeleniumTests.GroupingExample"/>
-        <method signature="GroupingExample.OnePlus2()[pri:0, instance:SeleniumTests.GroupingExample@46268f08]" name="OnePlus2" class="SeleniumTests.GroupingExample"/>
-      </group> <!-- OnePlus -->
     </groups>
-    <test started-at="2024-11-03T12:17:25 IST" name="SeleniumProjects" finished-at="2024-11-03T12:17:30 IST" duration-ms="5056">
-      <class name="SeleniumTests.GroupingExample">
-        <test-method signature="Apple2()[pri:0, instance:SeleniumTests.GroupingExample@46268f08]" started-at="2024-11-03T12:17:25 IST" name="Apple2" finished-at="2024-11-03T12:17:25 IST" duration-ms="3" status="PASS">
+    <test started-at="2024-11-18T17:11:15 IST" name="Default test" finished-at="2024-11-18T17:11:45 IST" duration-ms="29400">
+      <class name="DataProviderandParameters.DataDrivenTest">
+        <test-method signature="LoginTest(java.lang.String,java.lang.String)[pri:0, instance:DataProviderandParameters.DataDrivenTest@366ac49b]" started-at="2024-11-18T17:11:16 IST" name="LoginTest" data-provider="loginData" finished-at="2024-11-18T17:11:25 IST" duration-ms="8730" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin123]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Apple2 -->
-        <test-method signature="Apple1()[pri:0, instance:SeleniumTests.GroupingExample@46268f08]" started-at="2024-11-03T12:17:25 IST" name="Apple1" finished-at="2024-11-03T12:17:25 IST" duration-ms="3" status="PASS">
+        </test-method> <!-- LoginTest -->
+        <test-method signature="LoginTest(java.lang.String,java.lang.String)[pri:0, instance:DataProviderandParameters.DataDrivenTest@366ac49b]" started-at="2024-11-18T17:11:25 IST" name="LoginTest" data-provider="loginData" finished-at="2024-11-18T17:11:31 IST" duration-ms="6300" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin1244]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Apple1 -->
-        <test-method signature="OnePlus1()[pri:0, instance:SeleniumTests.GroupingExample@46268f08]" started-at="2024-11-03T12:17:25 IST" name="OnePlus1" finished-at="2024-11-03T12:17:25 IST" duration-ms="0" status="PASS">
+        </test-method> <!-- LoginTest -->
+        <test-method signature="LoginTest(java.lang.String,java.lang.String)[pri:0, instance:DataProviderandParameters.DataDrivenTest@366ac49b]" started-at="2024-11-18T17:11:31 IST" name="LoginTest" data-provider="loginData" finished-at="2024-11-18T17:11:38 IST" duration-ms="6832" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin123]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin123]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- OnePlus1 -->
-        <test-method signature="OnePlus2()[pri:0, instance:SeleniumTests.GroupingExample@46268f08]" started-at="2024-11-03T12:17:25 IST" name="OnePlus2" finished-at="2024-11-03T12:17:25 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- LoginTest -->
+        <test-method signature="LoginTest(java.lang.String,java.lang.String)[pri:0, instance:DataProviderandParameters.DataDrivenTest@366ac49b]" started-at="2024-11-18T17:11:38 IST" name="LoginTest" data-provider="loginData" finished-at="2024-11-18T17:11:45 IST" duration-ms="6354" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin1234]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin1234]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- OnePlus2 -->
-        <test-method signature="Samsung2()[pri:0, instance:SeleniumTests.GroupingExample@46268f08]" started-at="2024-11-03T12:17:25 IST" name="Samsung2" finished-at="2024-11-03T12:17:25 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- LoginTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:DataProviderandParameters.DataDrivenTest@366ac49b]" started-at="2024-11-18T17:11:45 IST" name="tearDown" finished-at="2024-11-18T17:11:45 IST" duration-ms="106" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Samsung2 -->
-        <test-method signature="Samsung1()[pri:0, instance:SeleniumTests.GroupingExample@46268f08]" started-at="2024-11-03T12:17:25 IST" name="Samsung1" finished-at="2024-11-03T12:17:25 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Samsung1 -->
-      </class> <!-- SeleniumTests.GroupingExample -->
-      <class name="SeleniumTests.ParallelTesting">
-        <test-method signature="openGoogle()[pri:0, instance:SeleniumTests.ParallelTesting@66565121]" started-at="2024-11-03T12:17:25 IST" name="openGoogle" finished-at="2024-11-03T12:17:29 IST" duration-ms="3628" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openGoogle -->
-        <test-method signature="openYahoo()[pri:0, instance:SeleniumTests.ParallelTesting@66565121]" started-at="2024-11-03T12:17:25 IST" name="openYahoo" finished-at="2024-11-03T12:17:30 IST" duration-ms="5031" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openYahoo -->
-      </class> <!-- SeleniumTests.ParallelTesting -->
-    </test> <!-- SeleniumProjects -->
-  </suite> <!-- All Test Suite -->
+        </test-method> <!-- tearDown -->
+      </class> <!-- DataProviderandParameters.DataDrivenTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

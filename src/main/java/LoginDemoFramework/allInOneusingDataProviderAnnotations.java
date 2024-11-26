@@ -26,7 +26,7 @@ public class allInOneusingDataProviderAnnotations {
     public void allinOne(String uName, String pword) throws InterruptedException
     {
         WebDriver driver = new ChromeDriver();
-        System.setProperty("webdriveaa  r.chrome.driver","/usr/local/bin/chromedriver");
+        System.setProperty("webdriver.chrome.driver","/usr/local/bin/chromedriver");
         driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
         Thread.sleep(2000);
         //driver.get("https:google.co.in");
@@ -38,7 +38,7 @@ public class allInOneusingDataProviderAnnotations {
         // Locate the password input field and enter "admin123"
         WebElement passwordInput = driver.findElement(By.xpath("//input[@name='password' and @placeholder='Password']"));
         passwordInput.sendKeys(pword);
-
+       
         WebElement login = driver.findElement(By.xpath("//*[@type='submit']"));
         login.click();
 

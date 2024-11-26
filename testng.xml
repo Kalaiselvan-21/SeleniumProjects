@@ -6,6 +6,9 @@
         <listener class-name="SeleniumTests.ListenersExample"> </listener>
     </listeners>-->
     <test name="SeleniumProjects">
+    
+    	<parameter name="os" value="Windows"></parameter>
+    	<parameter name="browser" value="chrome"></parameter>
 
         <!--<parameter name="Name" value="Kalai"> </parameter> -->
         <!--<groups>
@@ -25,20 +28,23 @@
                 <include name="openYahoo"/>
             </methods>
             </class>-->
-            <class name="SeleniumTests.GroupingExample"> </class>
-            <!-- <class name="SeleniumTests.ParameterizationExample"> </class>-->
+           <!-- <class name="SeleniumTests.GroupingExample"> </class>
+             <class name="SeleniumTests.ParameterizationExample"> </class>
            <class name="SeleniumTests.ParallelTesting"> </class>
-           <!-- <class name="SeleniumTests.AnnotationsHierarchy"> </class>-->
-           <!-- <class name="SeleniumTests.SampleTestCase"> </class>-->
+           <class name="SeleniumTests.AnnotationsHierarchy"> </class>
+           <class name="SeleniumTests.SampleTestCase"> </class>
 
-            <!--<class name="LoginDemoFramework.CorrectUserNameCorrectPassword"> </class>
+             <class name="LoginDemoFramework.CorrectUserNameCorrectPassword"> </class>
             <class name="LoginDemoFramework.CorrectUserNameWrongPassword"> </class>
             <class name="LoginDemoFramework.WrongUserNameCorrectPassword"> </class>
-            <class name="LoginDemoFramework.WrongUserNameWrongPassword"> </class>-->
+            <class name="LoginDemoFramework.WrongUserNameWrongPassword"> </class>
 
-            <!--<class name="LoginDemoFramework.allInOneusingDataProviderAnnotations"> </class>-->
-            <!--<class name="RestAssuredLearning.getAllEmployees"> </class>-->
-            <class name="RestAssuredLearning.SerializationExample"> </class>
+            <class name="LoginDemoFramework.allInOneusingDataProviderAnnotations"> </class>
+            <class name="RestAssuredLearning.getAllEmployees"> </class>
+            <class name="RestAssuredLearning.SerializationExample"> </class>-->
+            <class name="DataProviderandParameters.DataProviderDemo"></class>
+            
+           
         </classes>
     </test>
 </suite>

@@ -2,12 +2,16 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite thread-count="2" parallel="methods" name="Failed suite [All Test Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="2" parallel="methods" name="SeleniumProjects(failed)">
+    <parameter name="os" value="Windows"/>
+    <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="SeleniumTests.ParameterizationExample">
+      <class name="DataProviderandParameters.DataProviderDemo">
         <methods>
-          <include name="printName"/>
+          <include name="setup"/>
+          <include name="testLogin" invocation-numbers="1 3"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- SeleniumTests.ParameterizationExample -->
+      </class> <!-- DataProviderandParameters.DataProviderDemo -->
     </classes>
   </test> <!-- SeleniumProjects(failed) -->
 </suite> <!-- Failed suite [All Test Suite] -->
