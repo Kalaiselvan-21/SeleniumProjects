@@ -1,73 +1,81 @@
 package DataProviderandParameters;
 
-import java.sql.Driver;
 import java.time.Duration;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.safari.SafariDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import utils.WebDriverFactory;
+
 public class DataProviderDemo {
 	
-	WebDriver driver;
+	private WebDriver driver;
+	private static final Logger logger = LogManager.getLogger(DataProviderDemo.class);
+	
+	// Locators
+	private final By emailField = By.xpath("//input[@id='input-email']");
+	private final By passwordField = By.xpath("//input[@id='input-password']");
+	private final By loginButton = By.xpath("//input[@value='Login']");
+	private final By accountHeader = By.xpath("//h2[normalize-space()='My Account']");
+	private final By logoutLink = By.xpath("//a[@class='list-group-item'][normalize-space()='Logout']");
 	
 	@BeforeClass
-	void setup()
-	{
-		driver = new ChromeDriver();
-		
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-
+	void setup() {
+		logger.info("Setting up WebDriver");
+		driver = WebDriverFactory.createDriver("chrome");
 	}
 	
 	@Test(dataProvider = "dp")
-	void testLogin(String email, String password) throws InterruptedException
-	{
+	void testLogin(String email, String password) {
+		logger.info("Testing login with email: {}", email);
+		
 		driver.get("https://tutorialsninja.com/demo/index.php?route=account/login");
 		driver.manage().window().maximize();
 		
-		driver.findElement(By.xpath("//input[@id=\"input-email\"]")).sendKeys(email);
-		driver.findElement(By.xpath("//input[@id=\"input-password\"]")).sendKeys(password);
-		driver.findElement(By.xpath("//input[@value=\"Login\"]")).click();
-		Thread.sleep(2000);
+		// Use explicit wait instead of Thread.sleep
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		
-		boolean status = driver.findElement(By.xpath("//h2[normalize-space()='My Account']")).isDisplayed();
-		if (status == true)
-		{
-			driver.findElement(By.xpath("//a[@class='list-group-item'][normalize-space()='Logout']")).click();
-			Assert.assertTrue(true);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(emailField)).sendKeys(email);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(passwordField)).sendKeys(password);
+		wait.until(ExpectedConditions.elementToBeClickable(loginButton)).click();
+		
+		try {
+			boolean status = wait.until(ExpectedConditions.visibilityOfElementLocated(accountHeader)).isDisplayed();
+			if (status) {
+				logger.info("Login successful for user: {}", email);
+				wait.until(ExpectedConditions.elementToBeClickable(logoutLink)).click();
+				Assert.assertTrue(true);
+			}
+		} catch (Exception e) {
+			logger.error("Login failed for user: {}", email);
+			Assert.fail("Login failed for user: " + email);
 		}
-		else 
-		{
-			Assert.fail();
-			System.out.println("Login failed for the user: "+email);
-		}
-			
 	}
 	
 	@DataProvider(name = "dp")
-	Object[][] loginData()
-	{
-		Object data[][] = 
-			{
-				{"kalai21@gmail.com","test@123"},
-				{"kalai21.it@gmail.com","test@123"},
-				{"kalai2121.it@gmail.com","test@123"},
-				{"john.it@gmail.com","test@123"},
-				
-			};
-		return data;	
-
+	Object[][] loginData() {
+		return new Object[][] {
+			{"kalai21@gmail.com", "test@123"},
+			{"kalai21.it@gmail.com", "test@123"},
+			{"kalai2121.it@gmail.com", "test@123"},
+			{"john.it@gmail.com", "test@123"}
+		};
 	}
+	
 	@AfterClass
-	void tearDown()
-	{
-		driver.close();
+	void tearDown() {
+		if (driver != null) {
+			logger.info("Closing WebDriver");
+			driver.quit(); // Use quit() instead of close() to ensure all browser windows are closed
+		}
 	}
 }
